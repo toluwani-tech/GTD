@@ -5,9 +5,11 @@
   "scripts": {
     "db:local": "wrangler d1 migrations apply gtd --local",
     "db:remote": "wrangler d1 migrations apply gtd --remote",
-    "dev": "wrangler pages dev . --port 8788",
-    "deploy": "wrangler pages deploy . --project-name gtd",
+    "dev": "wrangler dev --port 8788",
+    "deploy": "wrangler deploy",
     "test": "node --test \"test/*.test.js\""
   },
-  "devDependencies": { "wrangler": "^4" }
+  "devDependencies": {
+    "wrangler": "^4"
+  }
 }

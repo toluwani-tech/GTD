@@ -1,0 +1,14 @@
+# Everything here is NOT served publicly. Only index.html, app.js and style.css are.
+functions
+src
+migrations
+test
+node_modules
+.wrangler
+.git
+wrangler.toml
+package.json
+package-lock.json
+README.md
+.gitignore
+.assetsignore

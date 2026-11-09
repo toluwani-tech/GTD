@@ -1,6 +1,10 @@
 name = "gtd"
+main = "src/worker.js"
 compatibility_date = "2024-11-01"
-pages_build_output_dir = "."
+
+[assets]
+directory = "."
+binding = "ASSETS"
 
 [[d1_databases]]
 binding = "DB"
