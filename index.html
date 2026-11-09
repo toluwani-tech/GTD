@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>GTD</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <h1 class="brand">GTD</h1>
+  <form id="quickAdd" class="quick" novalidate>
+    <label for="quickInput" class="sr">New task</label>
+    <input id="quickInput" name="title" type="text" placeholder="Add to inbox…  (press n)" autocomplete="off" aria-describedby="quickErr" maxlength="300">
+    <button type="submit" class="btn primary">Add</button>
+    <p id="quickErr" class="err" role="alert" hidden></p>
+  </form>
+  <nav aria-label="Main">
+    <a href="#tasks" data-nav="tasks">Tasks</a>
+    <a href="#process" data-nav="process">Process inbox <span id="inboxBadge" class="badge" hidden></span></a>
+    <a href="#projects" data-nav="projects">Projects</a>
+    <button type="button" class="btn ghost" id="helpBtn" aria-haspopup="dialog">Shortcuts <kbd>?</kbd></button>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1"></main>
+<div id="toasts" role="status" aria-live="polite"></div>
+
+<dialog id="editDlg" aria-labelledby="editTitle">
+  <form method="dialog" id="editForm" novalidate>
+    <h2 id="editTitle">Edit task</h2>
+    <label for="eTitle">Title</label>
+    <input id="eTitle" type="text" aria-describedby="eErr" maxlength="300">
+    <label for="eStatus">Status</label>
+    <select id="eStatus">
+      <option value="inbox">Inbox</option><option value="next">Next</option>
+      <option value="waiting">Waiting</option><option value="done">Done</option>
+    </select>
+    <label for="eProject">Project</label>
+    <select id="eProject"></select>
+    <p id="eErr" class="err" role="alert" hidden></p>
+    <div class="actions">
+      <button type="button" class="btn" data-close>Cancel</button>
+      <button type="submit" class="btn primary">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="renameDlg" aria-labelledby="renameTitle">
+  <form method="dialog" id="renameForm" novalidate>
+    <h2 id="renameTitle">Rename project</h2>
+    <label for="rName">Name</label>
+    <input id="rName" type="text" aria-describedby="rErr" maxlength="300">
+    <p id="rErr" class="err" role="alert" hidden></p>
+    <div class="actions">
+      <button type="button" class="btn" data-close>Cancel</button>
+      <button type="submit" class="btn primary">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="confirmDlg" aria-labelledby="confirmTitle" aria-describedby="confirmMsg">
+  <form method="dialog">
+    <h2 id="confirmTitle">Delete project?</h2>
+    <p id="confirmMsg"></p>
+    <div class="actions">
+      <button type="button" class="btn" data-close>Cancel</button>
+      <button type="submit" class="btn danger" id="confirmOk">Delete</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="helpDlg" aria-labelledby="helpTitle">
+  <h2 id="helpTitle">Keyboard shortcuts</h2>
+  <dl class="keys">
+    <dt><kbd>n</kbd></dt><dd>Focus the new-task input</dd>
+    <dt><kbd>?</kbd></dt><dd>Show this panel</dd>
+    <dt><kbd>Esc</kbd></dt><dd>Close a dialog</dd>
+    <dt><kbd>Tab</kbd></dt><dd>Move between controls</dd>
+  </dl>
+  <div class="actions"><button type="button" class="btn primary" data-close>Close</button></div>
+</dialog>
+
+<script src="/app.js"></script>
+</body>
+</html>

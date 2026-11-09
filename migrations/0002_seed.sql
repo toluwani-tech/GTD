@@ -1,0 +1,12 @@
+-- 3 projects, 8 tasks across all four statuses
+INSERT INTO projects (name,status,created_at,updated_at) VALUES ('Home renovation','active',strftime('%Y-%m-%dT%H:%M:%fZ','now','-900 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-900 minutes'));
+INSERT INTO projects (name,status,created_at,updated_at) VALUES ('Website launch','active',strftime('%Y-%m-%dT%H:%M:%fZ','now','-800 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-800 minutes'));
+INSERT INTO projects (name,status,created_at,updated_at) VALUES ('Learn Finnish','someday',strftime('%Y-%m-%dT%H:%M:%fZ','now','-700 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-700 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Call the plumber about the kitchen tap','inbox',NULL,strftime('%Y-%m-%dT%H:%M:%fZ','now','-30 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-30 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Read about GTD weekly review','inbox',NULL,strftime('%Y-%m-%dT%H:%M:%fZ','now','-20 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-20 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Pick paint colours for the living room','next',1,strftime('%Y-%m-%dT%H:%M:%fZ','now','-200 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-200 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Draft landing page copy','next',2,strftime('%Y-%m-%dT%H:%M:%fZ','now','-180 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-180 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Waiting for contractor quote','waiting',1,strftime('%Y-%m-%dT%H:%M:%fZ','now','-400 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-400 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Waiting for logo files from designer','waiting',2,strftime('%Y-%m-%dT%H:%M:%fZ','now','-350 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-350 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Buy a Finnish phrasebook','done',3,strftime('%Y-%m-%dT%H:%M:%fZ','now','-600 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-600 minutes'));
+INSERT INTO tasks (title,status,project_id,created_at,updated_at) VALUES ('Register the domain name','done',2,strftime('%Y-%m-%dT%H:%M:%fZ','now','-500 minutes'),strftime('%Y-%m-%dT%H:%M:%fZ','now','-500 minutes'));

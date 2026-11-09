@@ -1,0 +1,13 @@
+{
+  "name": "gtd-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "db:local": "wrangler d1 migrations apply gtd --local",
+    "db:remote": "wrangler d1 migrations apply gtd --remote",
+    "dev": "wrangler pages dev . --port 8788",
+    "deploy": "wrangler pages deploy . --project-name gtd",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "devDependencies": { "wrangler": "^4" }
+}
